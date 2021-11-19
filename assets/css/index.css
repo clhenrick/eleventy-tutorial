@@ -1,0 +1,12 @@
+:root {
+    --font-family: 'Helvetica Neue', sans-serif;
+    --font-color: #333333;
+    --bg-color: hsl(211deg, 90%, 97%);
+}
+
+html,
+body {
+    font-family: var(--font-family);
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
