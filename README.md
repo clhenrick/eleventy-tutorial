@@ -4,21 +4,21 @@ Learning [Eleventy](https://www.11ty.dev/).
 
 ## Pros & Cons
 
-Here I'm comparing Eleventy to my existing knowledge and familiarity of using the Jekyll static site generator (SSG).
+Here I'm comparing my first experience using Eleventy to my existing knowledge of and familiarity with using the Jekyll static site generator (SSG).
 
 ### Pros
 
-- Eleventy feels very similar to Jekyll in terms of SSG terminology and how code is organized. The generated site gets put in a folder called `_site`, there are build directory naming conventions such as `_data`, `_includes`, etc.
+- Eleventy feels very similar to Jekyll in terms of SSG terminology and how code is organized. The generated site is outputted in a folder called `_site`, there are build directory naming conventions such as `_data`, `_includes`, etc.
 
 - Eleventy supports a lot of features out of the box with no configuration file.
 
-- Writing JavaScript (NodeJS) for configuring things in Eleventy, such as data sources, collections, and asset pipelines feels natural as a frontend developer. I don't have to look up Ruby related things or remember how to use `rbenv`.
+- Writing JavaScript (NodeJS) for configuring things in Eleventy such as data sources, collections, and asset pipelines feels natural as a frontend developer. I don't have to look up Ruby related things or remember how to use `rbenv`.
 
-- You can easily use a templating language other than Liquid without having to write a or modify the Eleventy config file.
+- You can easily use an HTML templating language other than Liquid without having to write a or modify the Eleventy config file.
 
 - Making a custom collection feels a little more easy than in Jekyll, you just add a `[name].11tydata.js` file in the directory of your collection and have it export an object with a `tags` property.
 
-- Markdown files can literally live anywhere, such as in nested directories, and Eleventy will automatically process them to pages for you without any additional configuration.
+- Markdown files can literally live anywhere, such as in nested directories, and Eleventy will automatically process them to page URLs for you without any additional configuration.
 
 - Data handling (via Eleventy's Data Cascade) feels a little more advanced / modern than Jekyll, though to be fair I've never incorporated a remote data source into a Jekyll site before. Eleventy also has a way to [cache remote data](https://www.11ty.dev/docs/quicktips/) which is nice.
 
@@ -26,15 +26,15 @@ Here I'm comparing Eleventy to my existing knowledge and familiarity of using th
 
 - The folder naming convention is slightly different at times coming from Jekyll. For example, in Eleventy if you have a directory of blog post files and put them in a `_blog` directory like you would with Jekyll, then each post URL would be `/_blog/post-name/`. You can change this by using permalinks, like you can with Jekyll, but it caught me off guard.
 
-- More flexibility means more choices. I imagine that this likely means that each starter project you might choose could be structured differently, which is only really an issue if you want to customize things.
+- More flexibility can mean more choices and decisions to make. I imagine that this likely means that each starter project you might choose could be structured differently, which is only really an issue if you want to customize things.
 
-- Setting up a blog collection means you have to configure it manually using a `[name].11tydata.js` file in your blog posts directory.
+- Setting up a blog collection and pagination means you have to configure it manually using a `[name].11tydata.js` file in your blog posts directory, where as with Jekyll you get this out of the box.
 
 - Copying any static assets must be configured manually where as in Jekyll you get this out of the box.
 
 - To use Sass, you must configure it manually where as in Jekyll you get this out of the box.
 
-- Runtime JavaScript must be configured manually if you want to use any build tooling such as Webpack, Rollup, etc. Though to be fair, if you wanted to do this with Jekyll you'd also have to set it up manually. Eleventy's asset pipelines seem fairly straightforward to set up, but I have questions about how compatible they are with things like incorporating JS frameworks. To be fair, it makes sense that Eleventy is unopinionated about how you process JS given the plethora of options for doing this in the JS ecosystem. If it chose one option for you it could be convenient but potentially annoying to customize.
+- Runtime JavaScript must be configured manually if you want to use any build tooling such as Webpack, Rollup, etc. which at first seems a little odd given that Eleventy uses JavaScript heavily. Though to be fair, if you wanted to do this with Jekyll you'd also have to set it up manually. Eleventy's asset pipelines seem fairly straightforward to set up, but I have questions about how compatible they are with things like incorporating JS frameworks. It makes sense in some regard that Eleventy is unopinionated about how you process JS given the plethora of options for doing this in the JS ecosystem. If it chose one option for you it could be convenient but potentially annoying to customize or change later.
 
 ## Remaining Questions
 
