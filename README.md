@@ -14,9 +14,13 @@ Here I'm comparing my first experience using Eleventy to my existing knowledge o
 
 - Writing JavaScript (NodeJS) for configuring things in Eleventy such as data sources, collections, and asset pipelines feels natural as a frontend developer. I don't have to look up Ruby related things or remember how to use `rbenv`.
 
-- You can easily use an HTML templating language other than Liquid without having to write a or modify the Eleventy config file.
+- You can easily use an HTML templating language other than Liquid without any additional configuration.
+
+- You can mix and match templating languages without any additional configuration.
 
 - Making a custom collection feels a little more easy than in Jekyll, you just add a `[name].11tydata.js` file in the directory of your collection and have it export an object with a `tags` property.
+
+- You get pagination for free with collections.
 
 - Markdown files can literally live anywhere, such as in nested directories, and Eleventy will automatically process them to page URLs for you without any additional configuration.
 
@@ -57,17 +61,19 @@ General notes I took while going through setting up a basic Eleventy project.
 - eleventy has what's called a ["Data Cascade"](https://www.11ty.dev/docs/data-cascade/). [Tutorial on the Data Cascade by Ben Myers](https://benmyers.dev/blog/eleventy-data-cascade/).
 
 - data can come from:
-    - global data
-    - front matter, in layouts, templates
-    - template data files
-    - data directory (global data files)
-    - computed data
+
+  - global data
+  - front matter, in layouts, templates
+  - template data files
+  - data directory (global data files)
+  - computed data
 
 - pagination
-    - can be used to show a number of results at a time
-    - can iterate over any data to output anything you want
-    - multiple output files from a single input file
-    - e.g. fetch data from a CMS 
+
+  - can be used to show a number of results at a time
+  - can iterate over any data to output anything you want
+  - multiple output files from a single input file
+  - e.g. fetch data from a CMS
 
 - Eleventy has a lot of other cool, customizable features in it, like [Assett Pipelines](https://mxb.dev/blog/eleventy-asset-pipeline/) for built in processing CSS/Sass, JS, etc.
 
@@ -78,6 +84,8 @@ General notes I took while going through setting up a basic Eleventy project.
 - [Eleventy Quick Tips](https://www.11ty.dev/docs/quicktips/)
 
 - [Eleventy tutorials](https://www.11ty.dev/docs/tutorials/)
+
+- [11ty Rocks!](https://11ty.rocks/) by Stephanie Eckles
 
 - Tutorial: [Learn Eleventy From Scratch by Andy Bell](https://learneleventyfromscratch.com/)
 
